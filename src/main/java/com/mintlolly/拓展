@@ -1,0 +1,20 @@
+边界符
+
+实现  查找一个泛型数组中大于某个特定元素的个数，可以这样实现
+
+public static <T> int countGreaterThan(T[] anArray,T elem){
+    int count = 0;
+    for (T e: anArray){
+        if(e > elem)
+            ++count;
+    return count;
+    }
+}
+错误，编译器报错。 short,int,double,long,float,byte,char 等原始类型，其他的类并
+不一定能使用操作符 > ,所以编译器报错。这时使用边界符
+
+public interface Comparable<T>{
+    public int compareTo(T o);
+}
+这样等于告诉编译器类型参数 T 代表的都是实现了 Comparable 接口的类，这样等于告诉
+编译器他们都至少实现了compareTo方法
