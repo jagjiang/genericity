@@ -1,8 +1,9 @@
-package com.mintlolly;
+package com.mintlolly.clutter;
 
 /**
  * Create by jag on 2018/1/5
  */
+
 public class UseComparable {
     public static <T extends Comparable<T>> int countGreaterThan(T[] anArray, T elem) {
         int count = 0;

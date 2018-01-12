@@ -1,4 +1,4 @@
-package com.mintlolly;
+package com.mintlolly.clutter;
 
 /**
  * Create by jag on 2018/1/5
@@ -11,5 +11,10 @@ public class UseGenericityMethod {
         p1.setValue("wang");
         boolean same =GenericityMethod.compare(p1,p2);
         System.out.println(same);
+
+        InterImpl inter = new InterImpl();
+        inter.show("aaaa");
+        InterImpl2<Integer> interImpl2 = new InterImpl2<Integer>();
+        interImpl2.show(47);
     }
 }
